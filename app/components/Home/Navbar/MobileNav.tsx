@@ -1,6 +1,5 @@
-import { NavLinks } from "@/next.config";
+import { NavLinks } from "../../../../constant";
 import Link from 'next/link';
-import React from 'react'
 import { CgClose } from 'react-icons/cg';
 
 type Props = {
@@ -20,9 +19,11 @@ const MobileNav = ({closeNav, showNav}: Props) => {
       duration-500 delay-300 w-[80%] sm:w-[60%] bg-cyan-800 space-y-6 z-[1000050] right-0`}>
         {NavLinks.map((link)=>{
           return (
-            <Link key={link.id} href={link.url}>
+            <Link 
+            key={link.id} 
+            href={link.url}>
               <p className="text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
-                {link.label}
+              {link.label}
               </p>
             </Link>
           );
